@@ -15,7 +15,7 @@
   body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
   a { color: var(--teal); text-decoration: none; }
   a:hover { text-decoration: underline; }
-
+ 
   /* NAV */
   nav { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); z-index: 100; padding: 0 2rem; }
   .nav-inner { max-width: 900px; margin: auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
@@ -23,7 +23,7 @@
   .nav-links { display: flex; gap: 1.5rem; }
   .nav-links a { font-size: 14px; color: var(--text-muted); }
   .nav-links a:hover { color: var(--teal); text-decoration: none; }
-
+ 
   /* HERO */
   .hero { background: linear-gradient(135deg, var(--teal-light) 0%, #f0faf6 100%); padding: 5rem 2rem 4rem; }
   .hero-inner { max-width: 900px; margin: auto; display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
@@ -38,16 +38,16 @@
   .hero-contact a:hover { color: var(--teal); text-decoration: none; }
   .cta-btn { display: inline-block; margin-top: 1.5rem; background: var(--teal); color: white; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 500; }
   .cta-btn:hover { background: var(--teal-mid); text-decoration: none; }
-
+ 
   /* SECTIONS */
   section { padding: 3.5rem 2rem; }
   section:nth-child(even) { background: var(--bg-soft); }
   .section-inner { max-width: 900px; margin: auto; }
   .section-title { font-size: 1.3rem; font-weight: 600; color: var(--teal); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--teal-light); }
-
+ 
   /* ABOUT */
   .about-text { font-size: 1rem; color: var(--text-muted); line-height: 1.8; max-width: 720px; }
-
+ 
   /* SKILLS GRID */
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
   .skill-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.4rem; }
@@ -55,7 +55,7 @@
   .skill-card ul { list-style: none; }
   .skill-card ul li { font-size: 13.5px; color: var(--text-muted); padding: 3px 0; padding-left: 16px; position: relative; }
   .skill-card ul li::before { content: "›"; position: absolute; left: 0; color: var(--teal-mid); font-weight: bold; }
-
+ 
   /* EXPERIENCE */
   .timeline { position: relative; padding-left: 1.5rem; }
   .timeline::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px; background: var(--teal-light); border-radius: 2px; }
@@ -67,31 +67,31 @@
   .timeline-bullets { list-style: none; margin-top: 8px; }
   .timeline-bullets li { font-size: 14px; color: var(--text-muted); padding: 3px 0 3px 16px; position: relative; }
   .timeline-bullets li::before { content: "·"; position: absolute; left: 0; color: var(--teal); font-size: 18px; line-height: 1.2; }
-
+ 
   /* EDUCATION */
   .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
   .edu-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; }
   .edu-card .degree { font-weight: 600; font-size: 15px; color: var(--text); margin-bottom: 4px; }
   .edu-card .uni { font-size: 13px; color: var(--text-muted); }
   .edu-card .year { display: inline-block; margin-top: 8px; font-size: 12px; background: var(--teal-light); color: var(--teal); padding: 2px 10px; border-radius: 12px; font-weight: 500; }
-
-  /* PORTFOLIO PLACEHOLDER */
-  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
-  .portfolio-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; display: flex; flex-direction: column; gap: 8px; }
-  .portfolio-card .type-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; color: var(--teal-mid); }
-  .portfolio-card .title { font-size: 15px; font-weight: 600; color: var(--text); }
-  .portfolio-card .desc { font-size: 13px; color: var(--text-muted); }
-  .portfolio-card .add-link { font-size: 13px; color: var(--border); font-style: italic; }
-
+ 
+  /* PDF GALLERY */
+  .pdf-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 1.5rem; }
+  .pdf-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .pdf-card-header { padding: 1rem 1.2rem; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 4px; }
+  .pdf-card-header .type-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; color: var(--teal-mid); }
+  .pdf-card-header .pdf-title { font-size: 15px; font-weight: 600; color: var(--text); }
+  .pdf-card iframe { display: block; width: 100%; height: 420px; border: none; background: #f5f5f5; }
+ 
   /* CONTACT */
   .contact-box { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between; }
   .contact-info p { font-size: 15px; color: var(--text-muted); margin-bottom: 8px; }
   .contact-info strong { color: var(--text); }
-
+ 
   /* FOOTER */
   footer { background: var(--teal); color: rgba(255,255,255,0.7); text-align: center; padding: 1.5rem 2rem; font-size: 13px; }
   footer strong { color: white; }
-
+ 
   @media (max-width: 600px) {
     .hero-inner { flex-direction: column; gap: 1.5rem; }
     .hero-text h1 { font-size: 1.7rem; }
@@ -100,7 +100,7 @@
 </style>
 </head>
 <body>
-
+ 
 <nav>
   <div class="nav-inner">
     <span class="nav-logo">Dr. Nidhi Warthe</span>
@@ -113,7 +113,7 @@
     </div>
   </div>
 </nav>
-
+ 
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-avatar">NW</div>
@@ -128,15 +128,15 @@
         <span class="badge">Clinical Research</span>
       </div>
       <div class="hero-contact">
-        <a href="mailto:warthenidhi@gmail.com">✉ warthenidhi@gmail.com</a>
+        <a href="/cdn-cgi/l/email-protection#7c0b1d0e08141912151814153c1b111d1510521f1311">✉ <span class="__cf_email__" data-cfemail="6e190f1c1a060b00070a06072e09030f0702400d0103">[email&#160;protected]</span></a>
         <a href="tel:9300799199">✆ 9300799199</a>
         <a href="#">📍 Mumbai, India</a>
       </div>
-      <a class="cta-btn" href="mailto:warthenidhi@gmail.com">Get in touch</a>
+      <a class="cta-btn" href="/cdn-cgi/l/email-protection#3c4b5d4e48545952555854557c5b515d5550125f5351">Get in touch</a>
     </div>
   </div>
 </section>
-
+ 
 <section id="about">
   <div class="section-inner">
     <h2 class="section-title">About me</h2>
@@ -148,7 +148,7 @@
     </p>
   </div>
 </section>
-
+ 
 <section id="skills">
   <div class="section-inner">
     <h2 class="section-title">Core qualifications</h2>
@@ -214,7 +214,7 @@
     </div>
   </div>
 </section>
-
+ 
 <section id="experience">
   <div class="section-inner">
     <h2 class="section-title">Experience</h2>
@@ -256,7 +256,7 @@
     </div>
   </div>
 </section>
-
+ 
 <section id="education">
   <div class="section-inner">
     <h2 class="section-title">Education</h2>
@@ -279,30 +279,61 @@
     </div>
   </div>
 </section>
-
+ 
 <section id="portfolio">
   <div class="section-inner">
     <h2 class="section-title">Writing samples</h2>
-    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 1.5rem;">Selected work samples — add links to published pieces, manuscripts, or anonymised excerpts here.</p>
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <span class="type-tag">Manuscript</span>
-        <div class="title">Add your research paper title here</div>
-        <div class="desc">Journal name · Year</div>
-        <div class="add-link">→ Add DOI or PDF link</div>
+    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 1.5rem;">A selection of published and commissioned work across medical writing formats.</p>
+    <div class="pdf-gallery">
+ 
+      <div class="pdf-card">
+        <div class="pdf-card-header">
+          <span class="type-tag">Sample 1</span>
+          <span class="pdf-title">Writing Sample Title One — Replace This</span>
+        </div>
+        <iframe src="sample1.pdf" title="Writing Sample 1"></iframe>
       </div>
-      <div class="portfolio-card">
-        <span class="type-tag">Case Report</span>
-        <div class="title">Add case report title here</div>
-        <div class="desc">Journal name · Year</div>
-        <div class="add-link">→ Add DOI or PDF link</div>
+ 
+      <div class="pdf-card">
+        <div class="pdf-card-header">
+          <span class="type-tag">Sample 2</span>
+          <span class="pdf-title">Writing Sample Title Two — Replace This</span>
+        </div>
+        <iframe src="sample2.pdf" title="Writing Sample 2"></iframe>
       </div>
-      <div class="portfolio-card">
-        <span class="type-tag">CME Slide Deck / Abstract</span>
-        <div class="title">Add title of presentation or abstract</div>
-        <div class="desc">Conference / Publication · Year</div>
-        <div class="add-link">→ Add link or upload sample</div>
+ 
+      <div class="pdf-card">
+        <div class="pdf-card-header">
+          <span class="type-tag">Sample 3</span>
+          <span class="pdf-title">Writing Sample Title Three — Replace This</span>
+        </div>
+        <iframe src="sample3.pdf" title="Writing Sample 3"></iframe>
       </div>
+ 
+      <div class="pdf-card">
+        <div class="pdf-card-header">
+          <span class="type-tag">Sample 4</span>
+          <span class="pdf-title">Writing Sample Title Four — Replace This</span>
+        </div>
+        <iframe src="sample4.pdf" title="Writing Sample 4"></iframe>
+      </div>
+ 
+      <div class="pdf-card">
+        <div class="pdf-card-header">
+          <span class="type-tag">Sample 5</span>
+          <span class="pdf-title">Writing Sample Title Five — Replace This</span>
+        </div>
+        <iframe src="sample5.pdf" title="Writing Sample 5"></iframe>
+      </div>
+ 
+      <div class="pdf-card">
+        <div class="pdf-card-header">
+          <span class="type-tag">Sample 6</span>
+          <span class="pdf-title">Writing Sample Title Six — Replace This</span>
+        </div>
+        <iframe src="sample6.pdf" title="Writing Sample 6"></iframe>
+      </div>
+ 
     </div>
   </div>
 </section>
