@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Nidhi Warthe | Medical Writer & Microbiologist</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal: #0F6E56; --teal-light: #E1F5EE; --teal-mid: #1D9E75;
+    --text: #2C2C2A; --text-muted: #5F5E5A; --text-light: #888780;
+    --bg: #ffffff; --bg-soft: #F8FAF9; --border: #D3D1C7;
+    --radius: 12px;
+  }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+  a { color: var(--teal); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); z-index: 100; padding: 0 2rem; }
+  .nav-inner { max-width: 900px; margin: auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .nav-logo { font-weight: 600; font-size: 15px; color: var(--teal); }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a { font-size: 14px; color: var(--text-muted); }
+  .nav-links a:hover { color: var(--teal); text-decoration: none; }
+
+  /* HERO */
+  .hero { background: linear-gradient(135deg, var(--teal-light) 0%, #f0faf6 100%); padding: 5rem 2rem 4rem; }
+  .hero-inner { max-width: 900px; margin: auto; display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
+  .hero-avatar { width: 120px; height: 120px; border-radius: 50%; background: var(--teal); color: white; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 600; flex-shrink: 0; border: 4px solid white; box-shadow: 0 4px 20px rgba(15,110,86,0.2); }
+  .hero-text h1 { font-size: 2.2rem; font-weight: 700; color: var(--text); line-height: 1.2; }
+  .hero-text h1 span { color: var(--teal); }
+  .hero-tagline { margin-top: 0.5rem; font-size: 1.05rem; color: var(--text-muted); }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.2rem; }
+  .badge { background: white; border: 1px solid var(--border); color: var(--teal); font-size: 13px; padding: 4px 12px; border-radius: 20px; font-weight: 500; }
+  .hero-contact { display: flex; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .hero-contact a { font-size: 14px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+  .hero-contact a:hover { color: var(--teal); text-decoration: none; }
+  .cta-btn { display: inline-block; margin-top: 1.5rem; background: var(--teal); color: white; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 500; }
+  .cta-btn:hover { background: var(--teal-mid); text-decoration: none; }
+
+  /* SECTIONS */
+  section { padding: 3.5rem 2rem; }
+  section:nth-child(even) { background: var(--bg-soft); }
+  .section-inner { max-width: 900px; margin: auto; }
+  .section-title { font-size: 1.3rem; font-weight: 600; color: var(--teal); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--teal-light); }
+
+  /* ABOUT */
+  .about-text { font-size: 1rem; color: var(--text-muted); line-height: 1.8; max-width: 720px; }
+
+  /* SKILLS GRID */
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+  .skill-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.4rem; }
+  .skill-card h3 { font-size: 14px; font-weight: 600; color: var(--teal); margin-bottom: 0.7rem; }
+  .skill-card ul { list-style: none; }
+  .skill-card ul li { font-size: 13.5px; color: var(--text-muted); padding: 3px 0; padding-left: 16px; position: relative; }
+  .skill-card ul li::before { content: "›"; position: absolute; left: 0; color: var(--teal-mid); font-weight: bold; }
+
+  /* EXPERIENCE */
+  .timeline { position: relative; padding-left: 1.5rem; }
+  .timeline::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px; background: var(--teal-light); border-radius: 2px; }
+  .timeline-item { position: relative; margin-bottom: 2.2rem; }
+  .timeline-item::before { content: ""; position: absolute; left: -1.875rem; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--teal); border: 2px solid white; box-shadow: 0 0 0 2px var(--teal); }
+  .timeline-date { font-size: 12px; color: var(--teal-mid); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .timeline-role { font-size: 1rem; font-weight: 600; color: var(--text); }
+  .timeline-org { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .timeline-bullets { list-style: none; margin-top: 8px; }
+  .timeline-bullets li { font-size: 14px; color: var(--text-muted); padding: 3px 0 3px 16px; position: relative; }
+  .timeline-bullets li::before { content: "·"; position: absolute; left: 0; color: var(--teal); font-size: 18px; line-height: 1.2; }
+
+  /* EDUCATION */
+  .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  .edu-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; }
+  .edu-card .degree { font-weight: 600; font-size: 15px; color: var(--text); margin-bottom: 4px; }
+  .edu-card .uni { font-size: 13px; color: var(--text-muted); }
+  .edu-card .year { display: inline-block; margin-top: 8px; font-size: 12px; background: var(--teal-light); color: var(--teal); padding: 2px 10px; border-radius: 12px; font-weight: 500; }
+
+  /* PORTFOLIO PLACEHOLDER */
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
+  .portfolio-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; display: flex; flex-direction: column; gap: 8px; }
+  .portfolio-card .type-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; color: var(--teal-mid); }
+  .portfolio-card .title { font-size: 15px; font-weight: 600; color: var(--text); }
+  .portfolio-card .desc { font-size: 13px; color: var(--text-muted); }
+  .portfolio-card .add-link { font-size: 13px; color: var(--border); font-style: italic; }
+
+  /* CONTACT */
+  .contact-box { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between; }
+  .contact-info p { font-size: 15px; color: var(--text-muted); margin-bottom: 8px; }
+  .contact-info strong { color: var(--text); }
+
+  /* FOOTER */
+  footer { background: var(--teal); color: rgba(255,255,255,0.7); text-align: center; padding: 1.5rem 2rem; font-size: 13px; }
+  footer strong { color: white; }
+
+  @media (max-width: 600px) {
+    .hero-inner { flex-direction: column; gap: 1.5rem; }
+    .hero-text h1 { font-size: 1.7rem; }
+    nav .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo">Dr. Nidhi Warthe</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-avatar">NW</div>
+    <div class="hero-text">
+      <h1>Dr. <span>Nidhi Warthe</span></h1>
+      <p class="hero-tagline">PhD Microbiologist · Certified Medical Writer · Clinical Research Communicator</p>
+      <div class="hero-badges">
+        <span class="badge">Medical Writing</span>
+        <span class="badge">Scientific Communication</span>
+        <span class="badge">Infectious Diseases</span>
+        <span class="badge">Immunology</span>
+        <span class="badge">Clinical Research</span>
+      </div>
+      <div class="hero-contact">
+        <a href="mailto:warthenidhi@gmail.com">✉ warthenidhi@gmail.com</a>
+        <a href="tel:9300799199">✆ 9300799199</a>
+        <a href="#">📍 Mumbai, India</a>
+      </div>
+      <a class="cta-btn" href="mailto:warthenidhi@gmail.com">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-inner">
+    <h2 class="section-title">About me</h2>
+    <p class="about-text">
+      I am a PhD-qualified Microbiologist and Certified Medical Writer with deep expertise in clinical research, scientific publications, and academic mentoring. My work spans the full spectrum of medical communication — from peer-reviewed manuscripts and case reports to CME slide decks, advisory board content, and patient education materials.
+    </p>
+    <p class="about-text" style="margin-top: 1rem;">
+      With multiple publications in infectious diseases and immunology, and hands-on experience at ICMR-NARI on Covid-associated mucormycosis research, I bring both scientific rigor and communication clarity to every project. I am currently a Medical Writer at Scientimed Solutions, Mumbai, translating complex clinical data into structured, publication-ready content.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-inner">
+    <h2 class="section-title">Core qualifications</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Medical Writing</h3>
+        <ul>
+          <li>Manuscripts (research &amp; review)</li>
+          <li>Case reports &amp; case series</li>
+          <li>Abstracts &amp; monographs</li>
+          <li>White papers &amp; survey reports</li>
+          <li>Patient education materials</li>
+          <li>Literature reviews</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Scientific Communication</h3>
+        <ul>
+          <li>CME/HCP slide decks</li>
+          <li>Advisory board MoM prep</li>
+          <li>KOL &amp; stakeholder engagement</li>
+          <li>Booklets &amp; yearbooks</li>
+          <li>Website &amp; digital content</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Editing &amp; Quality Control</h3>
+        <ul>
+          <li>Scientific editing &amp; proofreading</li>
+          <li>Journal formatting (Vancouver/AMA)</li>
+          <li>Plagiarism check</li>
+          <li>Quality &amp; compliance review</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Research &amp; Evidence Synthesis</h3>
+        <ul>
+          <li>PubMed literature search</li>
+          <li>Data interpretation</li>
+          <li>Evidence synthesis &amp; critical appraisal</li>
+          <li>Reference management (EndNote/Mendeley)</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Tools &amp; Technology</h3>
+        <ul>
+          <li>MS Word, PowerPoint, Excel</li>
+          <li>Advanced Excel</li>
+          <li>AI content evaluation &amp; validation</li>
+          <li>Digital content writing</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Research Expertise</h3>
+        <ul>
+          <li>Infectious diseases</li>
+          <li>Immunology</li>
+          <li>Covid-associated mucormycosis</li>
+          <li>Cohort &amp; case-control study design</li>
+          <li>Pharmacovigilance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-inner">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Jun 2025 – Present</div>
+        <div class="timeline-role">Medical Writer</div>
+        <div class="timeline-org">Scientimed Solutions, Mumbai</div>
+        <ul class="timeline-bullets">
+          <li>Develop manuscripts, case reports, abstracts, monographs, and survey reports</li>
+          <li>Create CME/HCP slide decks and academic presentation materials</li>
+          <li>Prepare booklets, yearbooks, and patient education materials</li>
+          <li>Participate in advisory board meetings and prepare Minutes of Meeting (MoM)</li>
+          <li>Translate complex clinical data into structured, client-appropriate digital content</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Dec 2021 – Sep 2022</div>
+        <div class="timeline-role">Research Associate</div>
+        <div class="timeline-org">ICMR-NARI, Pune</div>
+        <ul class="timeline-bullets">
+          <li>Coordinated national cohort case-control study on Covid-associated mucormycosis</li>
+          <li>Assisted laboratory team in conducting experiments</li>
+          <li>Guided research methodologies and ensured data integrity</li>
+          <li>Conducted data extraction and analysis, compiling accurate research findings</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Jul 2019 – Aug 2020</div>
+        <div class="timeline-role">Associate Professor</div>
+        <div class="timeline-org">MATS University, Raipur</div>
+        <ul class="timeline-bullets">
+          <li>Delivered lectures to postgraduate students in Microbiology</li>
+          <li>Supervised dissertations — proofreading and editing student work</li>
+          <li>Mentored 8 PhD scholars through research design and thesis writing</li>
+          <li>Received one PhD submission under direct supervision during tenure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="section-inner">
+    <h2 class="section-title">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="degree">PhD in Microbiology</div>
+        <div class="uni">Rani Durgavati Vishwavidyalaya</div>
+        <span class="year">2005 – 2009</span>
+      </div>
+      <div class="edu-card">
+        <div class="degree">Master's in Microbiology</div>
+        <div class="uni">Rani Durgavati Vishwavidyalaya</div>
+        <span class="year">2000 – 2002</span>
+      </div>
+      <div class="edu-card">
+        <div class="degree">PG Diploma — Medical Writing, Pharmacovigilance, Digital Content Writing &amp; Advanced Excel</div>
+        <div class="uni">Henry Harvin Education</div>
+        <span class="year">2022 – 2023</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="section-inner">
+    <h2 class="section-title">Writing samples</h2>
+    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 1.5rem;">Selected work samples — add links to published pieces, manuscripts, or anonymised excerpts here.</p>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <span class="type-tag">Manuscript</span>
+        <div class="title">Add your research paper title here</div>
+        <div class="desc">Journal name · Year</div>
+        <div class="add-link">→ Add DOI or PDF link</div>
+      </div>
+      <div class="portfolio-card">
+        <span class="type-tag">Case Report</span>
+        <div class="title">Add case report title here</div>
+        <div class="desc">Journal name · Year</div>
+        <div class="add-link">→ Add DOI or PDF link</div>
+      </div>
+      <div class="portfolio-card">
+        <span class="type-tag">CME Slide Deck / Abstract</span>
+        <div class="title">Add title of presentation or abstract</div>
+        <div class="desc">Conference / Publication · Year</div>
+        <div class="add-link">→ Add link or upload sample</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-inner">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-box">
+      <div class="contact-info">
+        <p><strong>Email</strong><br><a href="mailto:warthenidhi@gmail.com">warthenidhi@gmail.com</a></p>
+        <p><strong>Phone</strong><br>+91 9300799199</p>
+        <p><strong>Location</strong><br>505/Whispering Palms, Kandivali (E), Mumbai, MH</p>
+      </div>
+      <div>
+        <a class="cta-btn" href="mailto:warthenidhi@gmail.com">Send me an email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>Dr. Nidhi Warthe</strong> · Medical Writer &amp; PhD Microbiologist · Mumbai, India
+</footer>
+
+</body>
+</html>
